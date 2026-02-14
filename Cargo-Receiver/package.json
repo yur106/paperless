@@ -4,8 +4,7 @@
   "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/yur106/paperless/",
-  "scripts":
-  {
+  "scripts": {
     "dev:client": "vite dev --port 5000",
     "dev": "NODE_ENV=development tsx server/index.ts",
     "build": "tsx script/build.ts",
