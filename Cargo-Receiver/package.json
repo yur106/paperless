@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://yuri106.github.io/paperless/",
+  "homepage": "https://github.com/yur106/paperless/",
   "scripts":
   {
     "dev:client": "vite dev --port 5000",
