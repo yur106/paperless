@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-  "scripts":
   "homepage": "https://yuri106.github.io/paperless/",
+  "scripts":
   {
     "dev:client": "vite dev --port 5000",
     "dev": "NODE_ENV=development tsx server/index.ts",
