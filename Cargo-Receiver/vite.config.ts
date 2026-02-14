@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url)
 const _dirname = path.dirname(_filename)
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'github' ? '/Cargo-Receiver/' : '/',
+  base: mode === 'github' ? '/paperless/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
