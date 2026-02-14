@@ -1,0 +1,158 @@
+1. Organização correta da linha (estrutura da tabela)
+
+Cada palete deve ocupar uma única linha, com os campos na seguinte ordem:
+
+Produto
+
+SCC
+
+SKU
+
+Validade
+
+Lote
+
+Número de Caixas (Esperado)
+
+Número de Caixas (Conferido)
+
+Status de Conferência
+
+O SKU não deve ficar abaixo do produto, e sim na mesma linha, seguindo a ordem acima, igual a um recebimento real.
+
+2. Lógica correta para “Número de Caixas”
+
+O sistema deve trabalhar com dois valores, não apenas um:
+
+Caixas Esperadas
+→ Valor enviado pela fábrica (ex: 55 caixas)
+
+Caixas Conferidas
+→ Valor contado fisicamente no recebimento (ex: 54 caixas)
+
+3. Regra operacional (caso real)
+
+Se Caixas Conferidas = Caixas Esperadas
+
+Status: ✅ OK
+
+Linha fica verde
+
+Palete liberado
+
+Se Caixas Conferidas ≠ Caixas Esperadas
+
+Status: ⚠ Divergência
+
+Linha fica amarela ou vermelha
+
+O sistema ainda permite finalizar o recebimento
+
+O palete é considerado recebido com base no valor esperado
+
+O sistema gera automaticamente um RO (Registro de Ocorrência)
+
+4. Registro de Ocorrência (RO)
+
+Quando houver divergência de caixas, o sistema deve:
+
+Criar um RO automático contendo:
+
+Produto
+
+SCC
+
+SKU
+
+Validade
+
+Lote
+
+Caixas Esperadas
+
+Caixas Conferidas
+
+Diferença encontrada
+
+Data e hora
+
+Nome do conferente
+
+Isso evita sobra ou falta física no estoque e mantém o processo alinhado com a fábrica.
+
+5. Conceito da conferência (checklist)
+
+Essa tela de conferência não é a validação final.
+
+Ela funciona como:
+
+Um checklist visual
+
+Confirmação manual de que:
+
+Produto confere
+
+SCC confere
+
+SKU confere
+
+Lote confere
+
+Validade confere
+
+Quantidade foi verificada
+
+A validação oficial continua sendo feita pelo coletor.
+
+6. Dupla validação (processo correto)
+
+O processo deve seguir este fluxo:
+
+1️⃣ Coletor
+
+Faz a leitura oficial (SCC, SKU, lote, validade)
+
+Essa leitura é a que vale para o sistema
+
+2️⃣ Conferente (tela de checklist)
+
+Confirma visualmente
+
+Marca como OK ou Divergente
+
+Serve como segunda camada de segurança
+
+O objetivo não é substituir o coletor, e sim reduzir erro humano.
+
+7. Finalização do recebimento
+
+Ao clicar em “Finalizar Recebimento”:
+
+O sistema permite finalizar mesmo com divergências
+
+Exibe um resumo geral
+
+Mostra lista de RO gerados (se houver)
+
+Abre a tela de assinatura:
+
+Conferente
+
+Supervisor
+
+Líder de Expedição
+
+8. Conceito-chave (importante)
+
+O que vale para o estoque é o coletor.
+O que vale para o processo é a dupla conferência.
+
+Esse sistema funciona como:
+
+Controle
+
+Evidência
+
+Auditoria
+
+Segurança operacional
